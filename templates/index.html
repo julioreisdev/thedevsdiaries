@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+
+{% block title %}The Devs Diaries{% endblock %} 
+{%block content %}
+<div class="create_post">
+  <div class="create_post_container">
+    <p>No que você está pensando?</p>
+    <form id="post-form">
+      <div class="form_inputs">
+        <div style="width: 30%;">
+          <input id='input-email' required type="email" class="form-control" id="exampleFormControlInput1" placeholder="e-mail">
+          <input id='input-title' required type="text" class="form-control" id="text-title" placeholder="título">
+        </div>
+        <input id='input-message' style="width: 69%;" required type="text" class="form-control" id="text-content" placeholder="sua mensagem">
+      </div>
+      <button id='publish-button' style="padding: 0 0.5rem;" type="submit" class="btn btn-primary">Publicar</button>
+    </form>
+  </div>
+</div>
+<div class="list-group cards_container list">
+  {% for card in cards %}
+  <a class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{card['title']}}</h5>
+      <small class="text-body-secondary">{{card['created_at']}}</small>
+    </div>
+    <p class="mb-1">{{card['content']}}</p>
+    <small class="text-body-secondary">{{card['author']}}</small>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

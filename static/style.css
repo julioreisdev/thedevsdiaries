@@ -1,0 +1,57 @@
+header {
+  margin-bottom: 1rem;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cards_container,
+.create_post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.create_post {
+  margin-bottom: 2rem;
+}
+
+.create_post_container {
+  width: 60%;
+}
+
+.create_post_container form .form_inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create_post_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.create_post input {
+  margin-bottom: 0.5rem;
+}
+
+.cards_container a {
+  width: 60%;
+}
+
+@media (min-width: 0) and (max-width: 1080px) {
+  .cards_container a,
+  .create_post div {
+    width: 95%;
+  }
+}
